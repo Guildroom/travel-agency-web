@@ -2,102 +2,148 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <div className="w-full pt-8 min-h-screen px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="flex justify-center items-center flex-col pt-4">
+          <div className="text-teal-600 flex items-center gap-4">
+            <svg
+              className="h-24"
+              viewBox="0 0 28 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.41 10.3847C1.14777 7.4194 2.85643 4.7861 5.2639 2.90424C7.6714 1.02234 10.6393 0 13.695 0C16.7507 0 19.7186 1.02234 22.1261 2.90424C24.5336 4.7861 26.2422 7.4194 26.98 10.3847H25.78C23.7557 10.3549 21.7729 10.9599 20.11 12.1147C20.014 12.1842 19.9138 12.2477 19.81 12.3047H19.67C19.5662 12.2477 19.466 12.1842 19.37 12.1147C17.6924 10.9866 15.7166 10.3841 13.695 10.3841C11.6734 10.3841 9.6976 10.9866 8.02 12.1147C7.924 12.1842 7.8238 12.2477 7.72 12.3047H7.58C7.4762 12.2477 7.376 12.1842 7.28 12.1147C5.6171 10.9599 3.6343 10.3549 1.61 10.3847H0.41ZM23.62 16.6547C24.236 16.175 24.9995 15.924 25.78 15.9447H27.39V12.7347H25.78C24.4052 12.7181 23.0619 13.146 21.95 13.9547C21.3243 14.416 20.5674 14.6649 19.79 14.6649C19.0126 14.6649 18.2557 14.416 17.63 13.9547C16.4899 13.1611 15.1341 12.7356 13.745 12.7356C12.3559 12.7356 11.0001 13.1611 9.86 13.9547C9.2343 14.416 8.4774 14.6649 7.7 14.6649C6.9226 14.6649 6.1657 14.416 5.54 13.9547C4.4144 13.1356 3.0518 12.7072 1.66 12.7347H0V15.9447H1.61C2.39051 15.924 3.154 16.175 3.77 16.6547C4.908 17.4489 6.2623 17.8747 7.65 17.8747C9.0377 17.8747 10.392 17.4489 11.53 16.6547C12.1468 16.1765 12.9097 15.9257 13.69 15.9447C14.4708 15.9223 15.2348 16.1735 15.85 16.6547C16.9901 17.4484 18.3459 17.8738 19.735 17.8738C21.1241 17.8738 22.4799 17.4484 23.62 16.6547ZM23.62 22.3947C24.236 21.915 24.9995 21.664 25.78 21.6847H27.39V18.4747H25.78C24.4052 18.4581 23.0619 18.886 21.95 19.6947C21.3243 20.156 20.5674 20.4049 19.79 20.4049C19.0126 20.4049 18.2557 20.156 17.63 19.6947C16.4899 18.9011 15.1341 18.4757 13.745 18.4757C12.3559 18.4757 11.0001 18.9011 9.86 19.6947C9.2343 20.156 8.4774 20.4049 7.7 20.4049C6.9226 20.4049 6.1657 20.156 5.54 19.6947C4.4144 18.8757 3.0518 18.4472 1.66 18.4747H0V21.6847H1.61C2.39051 21.664 3.154 21.915 3.77 22.3947C4.908 23.1889 6.2623 23.6147 7.65 23.6147C9.0377 23.6147 10.392 23.1889 11.53 22.3947C12.1468 21.9165 12.9097 21.6657 13.69 21.6847C14.4708 21.6623 15.2348 21.9135 15.85 22.3947C16.9901 23.1884 18.3459 23.6138 19.735 23.6138C21.1241 23.6138 22.4799 23.1884 23.62 22.3947Z"
+                fill="currentColor"
+              />
+            </svg>
+          </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <h2 className="text-2xl pt-8 font-bold text-[#526b5c] flex items-center justify-center text-center">
+            Gusti Travel
+          </h2>
+
+          <p className="mt-2 text-[#526b5c] text-center">
+            Bali’s Eco Adventures, Local Soul, Unmatched Journeys
+          </p>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 pt-10">
+            <div className="hidden lg:block">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-72 object-cover lg:h-72"
+              />
+            </div>
+            <div className="col-span-2">
+              <h2 className="text-xl font-bold text-[#526b5c] flex items-center justify-center pt-8">
+                Welcome to Gusti Travel
+              </h2>
+              <p className="mt-2 text-[#526b5c]">
+                Discover Bali with Gusti Travel, a proudly local-owned travel
+                agent bringing you the island’s true essence in a sea of
+                foreign-run alternatives. We’re not just another tour
+                operator—we’re Balinese at heart, crafting an extraordinary
+                range of experiences that celebrate our home. Dive into our
+                diverse themes: find serenity with spiritual tours, immerse
+                yourself in rich traditions with cultural journeys, unleash your
+                wild side with adventure tours, expand your mind with
+                educational escapes, capture stunning moments on
+                Instagram-worthy tours, or embrace nature with our eco-friendly
+                adventures. From cycling through lush landscapes to trekking
+                hidden paths, we offer it all, backed by seamless transportation
+                across every corner of Bali—Kuta’s vibrant pulse to Ubud’s
+                tranquil embrace.
+              </p>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="col-span-2">
+              <h2 className="text-xl font-bold text-[#526b5c] flex items-center justify-center pt-8">
+                Why Choose Us?
+              </h2>
+
+              <p className="mt-2 text-[#526b5c] text-right">
+                Unlike many agents owned by outsiders, Gusti Travel is 100%
+                local, born from Bali’s soul and committed to its future—10% of
+                every booking supports our island’s communities through local
+                charities. Our passionate, homegrown team designs each tour with
+                authenticity and care, ensuring you connect deeply with Bali’s
+                spirit while leaving a positive mark. With endless options and
+                unmatched local insight, we turn your trip into a journey of
+                meaning and wonder.
+              </p>
+            </div>
+            <div className="hidden lg:block">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-72 object-cover lg:h-72"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+            <div className="hidden lg:block">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-72 object-cover lg:h-72"
+              />
+            </div>
+            <div className="col-span-2">
+              <h2 className="text-xl font-bold text-[#526b5c] flex items-center justify-center pt-8">
+                Ready to Explore?
+              </h2>
+              <p className="mt-2 text-[#526b5c]">
+                Step beyond the ordinary with Gusti Travel, where Bali’s beauty
+                meets local pride and eco-conscious adventure. Whether you seek
+                thrills, culture, or peace, our vast array of tours promises
+                something extraordinary for everyone. Book today and experience
+                Bali the way it’s meant to be—through the eyes of those who call
+                it home. Your adventure awaits!
+              </p>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-4 lg:gap-8">
+          <div className="p-6 sm:px-8 flex items-center justify-end flex-col lg:order-first order-last">
+            <p className="mt-2 text-gray-700">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
+
+            <a
+              className="mt-4 block rounded-sm border border-[#63806f] bg-[#63806f] px-12 py-3 text-center text-sm font-medium text-white hover:bg-transparent hover:text-[#63806f] focus:ring-3 focus:outline-hidden sm:mt-6"
+              href="#"
+            >
+              Learn more
+            </a>
+          </div>
+          <div className="grid grid-cols-1 pt-8 h-fit gap-4 sm:grid-cols-2 sm:items-stretch md:grid-cols-3 md:gap-8 lg:col-span-3">
+            <a href="#" className="bg-white p-8 rounded-lg">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-80 object-cover lg:h-96"
+              />
+            </a>
+            <a href="#" className="bg-white p-8 rounded-lg">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-80 object-cover lg:h-96"
+              />
+            </a>
+            <a href="#" className="bg-white p-8 rounded-lg">
+              <img
+                alt=""
+                src="/destination.jpeg"
+                className="max-w-full h-80 object-cover lg:h-96"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
